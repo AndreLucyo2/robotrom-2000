@@ -8,7 +8,8 @@ const controle = document.querySelectorAll('.controle-ajuste');
 
 controle.forEach((elelento) => {
     elelento.addEventListener('click', (evento) => {
-        console.log(evento.target)
+        console.log(evento.target.textContent)
+        
     })
 })
 
