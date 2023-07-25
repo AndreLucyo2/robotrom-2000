@@ -8,19 +8,26 @@ const controle = document.querySelectorAll('.controle-ajuste');
 
 controle.forEach((elelento) => {
     elelento.addEventListener('click', (evento) => {
-        console.log(evento.target.textContent)
-        manipulaDados(evento.target.textContent)
+
+        manipulaDados(evento.target.textContent, evento.target.parentNode);
+
+        console.log(evento.target.textContent);
+        console.log(evento.target.parentNode);
 
     })
 })
 
-//Definição do escopo dentralizado:
-function manipulaDados(operacao) {
+//Definição do escopo centralizado:
+function manipulaDados(operacao, controle) {
+
+    //a partir do pai, obtem apenas o que quer alterar:
+    const peca = controle.querySelector(".controle-contador")
+
     if (operacao === '+') {
-        braco.value = parseInt(braco.value) + 1;
+        peca.value = parseInt(peca.value) + 1;
 
     } else {
-        braco.value = parseInt(braco.value) - 1;
+        peca.value = parseInt(peca.value) - 1;
 
     }
 }
