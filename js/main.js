@@ -5,10 +5,21 @@ const subtrair = document.querySelector("#subtrair");
 const braco = document.querySelector("#braco");
 
 
-somar.addEventListener("click", (evento) => {
-    braco.value = parseInt(braco.value) + 1;
+somar.addEventListener("click", () => {
+    manipulaDados('somar');
 })
 
-subtrair.addEventListener("click", (evento) => {
-    braco.value = parseInt(braco.value) - 1;
+subtrair.addEventListener("click", () => {
+    manipulaDados('subtrair');
 })
+
+//Definição do escopo dentralizado:
+function manipulaDados(operacao) {
+    if (operacao === 'somar') {
+        braco.value = parseInt(braco.value) + 1;
+
+    } else {
+        braco.value = parseInt(braco.value) - 1;
+
+    }
+}
