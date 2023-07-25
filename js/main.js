@@ -9,23 +9,14 @@ const controle = document.querySelectorAll('.controle-ajuste');
 controle.forEach((elelento) => {
     elelento.addEventListener('click', (evento) => {
         console.log(evento.target.textContent)
-        
+        manipulaDados(evento.target.textContent)
+
     })
-})
-
-
-
-somar.addEventListener("click", () => {
-    manipulaDados('somar');
-})
-
-subtrair.addEventListener("click", () => {
-    manipulaDados('subtrair');
 })
 
 //Definição do escopo dentralizado:
 function manipulaDados(operacao) {
-    if (operacao === 'somar') {
+    if (operacao === '+') {
         braco.value = parseInt(braco.value) + 1;
 
     } else {
