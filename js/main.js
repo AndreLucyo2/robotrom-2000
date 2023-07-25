@@ -5,7 +5,14 @@ const subtrair = document.querySelector("#subtrair");
 const braco = document.querySelector("#braco");
 
 const controle = document.querySelectorAll('.controle-ajuste');
-console.log(controle);
+
+controle.forEach((elelento) => {
+    elelento.addEventListener('click', (evento) => {
+        console.log(evento.target)
+    })
+})
+
+
 
 somar.addEventListener("click", () => {
     manipulaDados('somar');
