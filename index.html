@@ -8,7 +8,7 @@
     <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico" />
     <title>Robotron 2000</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet">
@@ -18,8 +18,17 @@
 <body>
     <main>
         <section class="robotron">
-            <img class="robo" src="img/robotron.png" alt="Robotron" id="roboTron">
+            <section class="botoes">
+                <button class="alterar" alterar onclick="trocaImagem('Azul')">Robotron Azul</button>
+                <button class="alterar" alterar onclick="trocaImagem('Amarelo')">Robotron Amarelo</button>
+                <button class="alterar" alterar onclick="trocaImagem('Branco')">Robotron Branco</button>
+                <button class="alterar" alterar onclick="trocaImagem('Preto')">Robotron Preto</button>
+                <button class="alterar" alterar onclick="trocaImagem('Rosa')">Robotron Rosa</button>
+                <button class="alterar" alterar onclick="trocaImagem('Vermelho')">Robotron Vermelho</button>
+            </section>
+            <img class="robo" src="/img/robotron.png" alt="Robotron" id="roboTron">
             <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
+
         </section>
 
         <section class="box estatisticas">
@@ -55,7 +64,8 @@
                     <div class="peca">
                         <label for="" class="peca-titulo">Braços</label>
                         <div class="controle">
-                            <buttom class="controle-ajuste" id="subtrair" data-controle="-" data-peca="bracos">-</buttom>
+                            <buttom class="controle-ajuste" id="subtrair" data-controle="-" data-peca="bracos">-
+                            </buttom>
                             <input type="text" class="controle-contador" value="00" data-contador>
                             <buttom class="controle-ajuste" id="somar" data-controle="+" data-peca="bracos">+</buttom>
                         </div>

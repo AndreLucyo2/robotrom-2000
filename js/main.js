@@ -68,3 +68,8 @@ function atualizaEstatistica(peca) {
     })
 
 }
+
+function trocaImagem(cor) {
+    // ** \img\Robotron 2000 - Amarelo\robotron.png
+    document.querySelector(".robo").src = "img/Robotron 2000 - " + cor + "/robotron.png";
+}
